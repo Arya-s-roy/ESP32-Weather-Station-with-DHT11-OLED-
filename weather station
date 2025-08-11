@@ -13,3 +13,11 @@ DHT dht(DHTPIN, DHTTYPE);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 const char* ssid = "YOUR_WIFI";
 const char* password = "YOUR_PASS";
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println("OLED failed");
+    while (1);
+  }
