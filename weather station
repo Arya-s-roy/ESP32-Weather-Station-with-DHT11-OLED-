@@ -37,6 +37,17 @@ void loop() {
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(0,0);
+  display.print("Temp: ");
+  display.print(t);
+  display.println("C");
+  display.print("Hum: ");
+  display.print(h);
+  display.println("%");
+  display.display();
+
+  delay(2000);
+}
+
   
 
 
