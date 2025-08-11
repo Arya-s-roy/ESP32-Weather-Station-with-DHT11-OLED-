@@ -21,3 +21,21 @@ void setup() {
     Serial.println("OLED failed");
     while (1);
   }
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+}
+
+void loop() {
+  float h = dht.readHumidity();
+  float t = dht.readTemperature();
+
+}
+
+
+
+
+
+
