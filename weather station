@@ -33,6 +33,11 @@ void loop() {
   float t = dht.readTemperature();
 
 }
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0,0);
+  
 
 
 
